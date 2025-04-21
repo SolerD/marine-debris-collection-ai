@@ -1,6 +1,6 @@
 # Lab 6: Real Estate Data Enhancement and Marine Debris Data Collection Service
 
-![Headshot]("digital-passport".jpg)
+![Digital Passport](images/digital-passport.jpg)
 
 ## About
 **Name**: Deus Kandamali  
