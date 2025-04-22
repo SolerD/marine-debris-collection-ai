@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from flask import Flask, request, render_template, flash, redirect, url_for
 from werkzeug.utils import secure_filename
 from datetime import datetime
+import logging
 
 load_dotenv()
 
@@ -43,7 +44,8 @@ def init_db():
 
 #Geocoding cache
 geocode_cache = {}
-CACHE_FILE = 'geocode_cache.json'
+#CACHE_FILE = 'geocode_cache.json'
+CACHE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'geocode_cache.json')
 
 #Load cache if exists and valid
 if os.path.exists(CACHE_FILE):
@@ -56,6 +58,7 @@ if os.path.exists(CACHE_FILE):
                 print(f"Warning: {CACHE_FILE} is empty, initializing empty cache")
     except (json.JSONDecodeError, ValueError) as e:
         print(f"Error loading {CACHE_FILE}: {e}, initializing empty cache")
+        logging.error(f"Error loading {CACHE_FILE}: {e}, initializing empty cache")
 
 def allowed_file(filename):
     """Check if file extension is allowed."""
