@@ -8,6 +8,7 @@ from flask import Flask, request, render_template, flash, redirect, url_for
 from werkzeug.utils import secure_filename
 from datetime import datetime
 import logging
+from flask import send_from_directory
 
 load_dotenv()
 
@@ -144,6 +145,15 @@ def index():
         debris_data = cursor.fetchall()
     
     return render_template('index.html', debris_data=debris_data)
+
+
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    '''
+        A route to servve uploaded files
+    '''
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+
 
 @app.route('/submit', methods=['POST'])
 def submit():
