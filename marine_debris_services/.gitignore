@@ -2,3 +2,6 @@
 config.txt
 database.db
 Uploads/*
+
+FlaskVEnv/
+__pycache__/
