@@ -1,3 +1,6 @@
+# Ignore Python virtual environments and bytecode cache
+FlaskVEnv/
+__pycache__/
 .env
 config.txt
 database.db
