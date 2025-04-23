@@ -5,3 +5,4 @@ Uploads/*
 
 FlaskVEnv/
 __pycache__/
+geocode_cache.json
