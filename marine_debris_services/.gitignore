@@ -1,4 +1,8 @@
 #Python venvs
+<<<<<<< HEAD
+=======
+venv/
+>>>>>>> 2b3f3789c13484d361a5fe42b90f1039a2ca268d
 FlaskVEnv/
 ../FlaskVEnv/
 
@@ -16,4 +20,7 @@ geocode_cache.json
 
 #uploaded media
 Uploads/
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2b3f3789c13484d361a5fe42b90f1039a2ca268d
