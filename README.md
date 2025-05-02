@@ -11,7 +11,8 @@ This project implements two parts for Lab 6: a Jupyter Notebook for real estate 
 This repository contains the solutions for Lab 6, consisting of:
 - **Part 1**: A Jupyter Notebook (`part1.ipynb`) processing Connecticut real estate dataset (2001–2020) by filtering for Mondays in April 2019, geocoding addresses using Nominatim, and fetching weather data using Open Meteo’s API.
 - **Part 2**: A Flask-based web service (`app.py`) for collecting marine debris data, accepting photo uploads, descriptions, and GPS coordinates, classifying debris using Google Gemini, reverse-geocoding coordinates with Nominatim, and storing valid data in an SQLite database.
-
+- A public youtube video link about the app: https://youtu.be/NYdH0JeJdPc
+ 
 ## Part 1: Real Estate Data Enhancement
 - **Original Dataset**: `real_estate.csv` (NOT committed to the repository).
 - **Generated Dataset** 'enhanced_real_estate_april_2019.csv' (Commited to the repository)
