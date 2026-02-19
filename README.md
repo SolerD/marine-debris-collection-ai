@@ -1,4 +1,4 @@
-# Lab 6: Real Estate Data Enhancement and Marine Debris Data Collection Service
+# Real Estate Data Enhancement and Marine Debris Data Collection Service
 
 ![Digital Passport](images/digital-passport.jpg)
 
