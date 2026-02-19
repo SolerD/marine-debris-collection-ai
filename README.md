@@ -1,45 +1,108 @@
-# Real Estate Data Enhancement and Marine Debris Data Collection Service
+# 🛰️ Real Estate Data Enhancement & Marine Debris Data Collection Service
 
 ![Digital Passport](images/digital-passport.jpg)
 
-## About
-**Name**: Deus Kandamali   
+## 👤 Author
+**Deus Francis Kandamali**  
+PhD Candidate, Electrical & Computer Engineering  
+University of Georgia  
+
+---
+
+## 📌 Overview
+
 This repository demonstrates data-driven applications developed using modern data science, geospatial analysis, and web technologies. It contains two independent components:
 
-## Overview
-This repository contains:
-- **Part 1**: A Jupyter Notebook (`part1.ipynb`) processing Connecticut real estate dataset (2001–2020) by filtering for Mondays in April 2019, geocoding addresses using Nominatim, and fetching weather data using Open Meteo’s API.
-- **Part 2**: A Flask-based web service (`app.py`) for collecting marine debris data, accepting photo uploads, descriptions, and GPS coordinates, classifying debris using Google Gemini, reverse-geocoding coordinates with Nominatim, and storing valid data in an SQLite database.
-- A public youtube video link about the app: https://youtu.be/NYdH0JeJdPc
- 
-## Part 1: Real Estate Data Enhancement
-- **Original Dataset**: `real_estate.csv` (NOT committed to the repository).
-- **Generated Dataset** 'enhanced_real_estate_april_2019.csv' (Commited to the repository)
-- **Tasks**:
-  - Filtered real estate data for Mondays in April 2019 using Pandas.
-  - Geocoded addresses missing latitude/longitude with Nominatim’s public API
-  - Fetched max temperature and precipitation for geocoded coordinates using Open Meteo’s Archive API, caching results.
-  - Generated a scatterplot of geocoded coordinates and saved results to `enhanced_real_estate_april_2019.csv`.
-- **Challenges**:
-  - Understanding API documentation challenges, takes longer to generate new csv with geocodes even after filtering
-  - Handled missing geocoding results by returning `None` for latitude/longitude.
-- **Output**: `enhanced_real_estate_april_2019.csv` (Also for graphing, I added a separete script below that runs on generated dataset to help Visualize Geocodes, Temperature and Precipitation).
+1. Real Estate Data Enhancement Pipeline — a Jupyter-based workflow integrating geospatial and weather data  
+2. Marine Debris Data Collection Service — a web application for environmental reporting and data management  
 
-## Part 2: Marine Debris Data Collection Service (visit [Site](https://marinedebris.dynv6.net/))
-- **Functionality**:
-  - **Root Route (`GET /`)**: Displays a form for uploading a photo, description, and GPS coordinates, and a table of submitted debris data.
-  - **Submit Route (`POST /submit`)**: Processes uploads, classifies images using Google Gemini, translates descriptions, reverse-geocodes coordinates to a country, and stores valid data in `database.db`.
-  - **Features**:
-    - Image classification with Google Gemini (NOAA categories: Plastic, Metal, Glass, Rubber, Processed Wood, Fabric, Other).
-    - Translation of non-English descriptions to English using Gemini.
-    - Reverse geocoding with Nominatim, caching results in `geocode_cache.json`. (Please in case of errors see if this file exists and delete this 'geocode_cache.json' file first before starting you program)
-    - SQLite database for storing debris data.
-    - NGINX reverse proxy server, Certbot for certificate, DNS for name resolution etc
-    - Error handling for invalid photos, coordinates, or non-debris images.
-- **Setup**:
-Go to this link for testing [Marine Debris Service](https://marinedebris.dynv6.net/)
-  - Install dependencies:
-  Install the requirements.txt to install dependencies
-        OR
-    ```bash
-    pip install flask requests google-generativeai python-dotenv gunicorn 
+These projects illustrate how computational tools can support evidence-based decision-making and environmental monitoring.
+
+---
+
+## 🏡 Part 1 — Real Estate Data Enhancement
+
+A data processing pipeline that enriches real estate records with geospatial coordinates and historical weather information.
+
+### Dataset
+
+- Original dataset: Connecticut real estate transactions (2001–2020)  
+- Filtered subset: Mondays in April 2019  
+- Generated output: `enhanced_real_estate_april_2019.csv`  
+
+### Processing Workflow
+
+- Filtered transactions using Pandas  
+- Geocoded addresses lacking coordinates using the Nominatim public API  
+- Retrieved historical weather data using the Open-Meteo Archive API  
+- Implemented caching to reduce redundant API calls  
+- Generated visualizations of geographic distribution  
+
+### Output
+
+- Enhanced dataset with coordinates and weather attributes  
+- Scatterplot visualization of geocoded properties  
+
+---
+
+## 🌊 Part 2 — Marine Debris Data Collection Service
+
+A Flask-based web application designed to collect, classify, and store marine debris reports submitted by users.
+
+👉 **Live demo:** https://marinedebris.dynv6.net/  
+👉 **Video overview:** https://youtu.be/NYdH0JeJdPc  
+
+### Key Features
+
+- User submission form for:
+  - Photo upload  
+  - Text description  
+  - GPS coordinates  
+
+- Automated processing:
+  - Image classification using Google Gemini  
+  - Translation of non-English descriptions into English  
+  - Reverse geocoding of coordinates  
+  - Data validation  
+
+### Storage
+
+- SQLite database (`database.db`)  
+- Cached geocoding results (`geocode_cache.json`)  
+
+### Classification Categories
+
+Based on NOAA marine debris classifications:
+
+- Plastic  
+- Metal  
+- Glass  
+- Rubber  
+- Processed Wood  
+- Fabric  
+- Other  
+
+### System Components
+
+- Flask web framework  
+- Google Generative AI (Gemini) for classification and translation  
+- Nominatim API for geospatial processing  
+- NGINX reverse proxy  
+- SSL certificates via Certbot  
+- DNS-based deployment  
+
+### Error Handling
+
+The system validates:
+
+- Image file integrity  
+- Coordinate correctness  
+- Debris relevance  
+- API failures  
+
+---
+
+## ⚙️ Installation & Setup
+
+Install dependencies:
+
