@@ -1,7 +1,5 @@
 # 🛰️ Real Estate Data Enhancement & Marine Debris Data Collection Service
 
-![Digital Passport](images/digital-passport.jpg)
-
 ## 👤 Author
 **Deus Francis Kandamali**  
 PhD Candidate, Electrical & Computer Engineering  
