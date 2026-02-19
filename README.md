@@ -1,13 +1,13 @@
-# 🛰️ Real Estate Data Enhancement & Marine Debris Data Collection Service
+# Real Estate Data Enhancement & Marine Debris Data Collection Service
 
-## 👤 Author
+## Author
 **Deus Francis Kandamali**  
 PhD Candidate, Electrical & Computer Engineering  
 University of Georgia  
 
 ---
 
-## 📌 Overview
+## Overview
 
 This repository demonstrates data-driven applications developed using modern data science, geospatial analysis, and web technologies. It contains two independent components:
 
@@ -18,7 +18,7 @@ These projects illustrate how computational tools can support evidence-based dec
 
 ---
 
-## 🏡 Part 1 — Real Estate Data Enhancement
+## Part 1 — Real Estate Data Enhancement
 
 A data processing pipeline that enriches real estate records with geospatial coordinates and historical weather information.
 
@@ -43,7 +43,7 @@ A data processing pipeline that enriches real estate records with geospatial coo
 
 ---
 
-## 🌊 Part 2 — Marine Debris Data Collection Service
+## Part 2 — Marine Debris Data Collection Service
 
 A Flask-based web application designed to collect, classify, and store marine debris reports submitted by users.
 
