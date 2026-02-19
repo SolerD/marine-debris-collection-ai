@@ -3,12 +3,11 @@
 ![Digital Passport](images/digital-passport.jpg)
 
 ## About
-**Name**: Deus Kandamali  
-**Course**: INFO-8000  
-This project implements two parts for Lab 6: a Jupyter Notebook for real estate data enhancement and a Flask-based web service for marine debris data collection.
+**Name**: Deus Kandamali   
+This repository demonstrates data-driven applications developed using modern data science, geospatial analysis, and web technologies. It contains two independent components:
 
 ## Overview
-This repository contains the solutions for Lab 6, consisting of:
+This repository contains:
 - **Part 1**: A Jupyter Notebook (`part1.ipynb`) processing Connecticut real estate dataset (2001–2020) by filtering for Mondays in April 2019, geocoding addresses using Nominatim, and fetching weather data using Open Meteo’s API.
 - **Part 2**: A Flask-based web service (`app.py`) for collecting marine debris data, accepting photo uploads, descriptions, and GPS coordinates, classifying debris using Google Gemini, reverse-geocoding coordinates with Nominatim, and storing valid data in an SQLite database.
 - A public youtube video link about the app: https://youtu.be/NYdH0JeJdPc
